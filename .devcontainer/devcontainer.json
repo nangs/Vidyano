@@ -28,5 +28,5 @@
 	"appPort": [ "8888:443" ],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install && grunt && ((dotnet /app/Vidyano.Web2.Runner.dll > /vidyano/web2-runner-log.txt) &)"
+	"postCreateCommand": "chmod 755 ./.devcontainer/postCreateCommand.sh && ./.devcontainer/postCreateCommand.sh"
 }
